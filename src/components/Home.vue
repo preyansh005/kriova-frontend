@@ -23,11 +23,11 @@
                 </div>
                 <div class="grp">
                     <h6 class="name">Address</h6>
-                    <h6 class="role">{{ street }}, {{ city }}, {{ state }}</h6>
+                    <h6 class="role">{{ address }}</h6>
                 </div>
                 <div class="grp">
-                    <h6 class="name">Company</h6>
-                    <h6 class="role">Kriova</h6>
+                    <h6 class="name">Date Of Birst</h6>
+                    <h6 class="role">{{ dob }}</h6>
                 </div>
             </div>
             <div class="emp-social">
@@ -52,28 +52,25 @@ export default {
     name: 'Home',
     data() {
         return {
-            // name: localStorage.getItem('name'),
-            name: "Preyansh",
-            email: "patelpreyansh71@gmail.com",
-            number: "8401420227",
-            street: "Ranip",
-            city: "Ahmedabad",
-            state: "Gujarat",
-            role: "Web Developer"
+            name: localStorage.getItem('name'),
+            email: localStorage.getItem('email'),
+            number: localStorage.getItem('mno'),
+            address: localStorage.getItem('address'),
+            role: localStorage.getItem('role'),
+            dob: localStorage.getItem('dob')
         }
     },
-    // mounted() {
-    //     if (localStorage.getItem('emp_id') && localStorage.getItem('name')) {
-    //         true
-    //     }
-    //     else {
-    //         this.$router.push('/login')
-    //     }
-    // },
+    mounted() {
+        if (localStorage.getItem('emp_id') && localStorage.getItem('name')) {
+            true
+        }
+        else {
+            this.$router.push('/login')
+        }
+    },
     methods: {
         logout() {
-            localStorage.removeItem('emp_id')
-            localStorage.removeItem('name')
+            localStorage.clear()
             this.$router.push('/login')
         }
     }

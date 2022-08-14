@@ -42,6 +42,11 @@ export default {
             else {
                 localStorage.setItem('emp_id', res.data.employee.employee_id)
                 localStorage.setItem('name', res.data.employee.name)
+                localStorage.setItem('dob', res.data.employee.dob)
+                localStorage.setItem('mno', res.data.employee.mno)
+                localStorage.setItem('role', res.data.employee.role)
+                localStorage.setItem('email', res.data.employee.email)
+                localStorage.setItem('address', res.data.employee.address)
                 this.$router.push('/home')
             }
         }
