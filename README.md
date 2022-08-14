@@ -10,9 +10,10 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### First Clone The Backend Repository and Run it First
+
 ```
-npm run build
+backend-repo: https://github.com/preyansh005/kriova-backend.git
 ```
 
 ### Customize configuration
