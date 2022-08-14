@@ -13,7 +13,7 @@ npm run serve
 ### First Clone The Backend Repository and Run it First
 
 ```
-backend-repo: https://github.com/preyansh005/kriova-backend.git
+backend-repo: https://github.com/preyansh005/kriova-backend
 ```
 
 ### Customize configuration
